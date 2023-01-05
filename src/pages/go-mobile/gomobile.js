@@ -15,9 +15,9 @@ export function GoMobile(){
                 <div>
                     <ul>
                         <li><a href="/">HOME</a></li>
-                        <li><a href="how-to-play">HOW TO PLAY</a></li>
-                        <li><a href="go-mobile">GO MOBILE!</a></li>
-                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="/how-to-play">HOW TO PLAY</a></li>
+                        <li><a href="/go-mobile">GO MOBILE!</a></li>
+                        <li><a href="/contact-us">CONTACT</a></li>
                     </ul>
                 </div>
             </div>

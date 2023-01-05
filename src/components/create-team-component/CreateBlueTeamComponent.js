@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 export function CreateBlueTeamComponent(props) {
   const [inputValues, setInputValues] = useState([]);
   const [numInputs, setNumInputs] = useState(3);
-  const blueTeamUrl = 'http://localhost:5000/blueteam';
+  const blueTeamUrl = 'http://localhost:5000/blueteam/1';
 
   const handleInputChange = (event) => {
     const { value } = event.target;
@@ -19,12 +19,13 @@ export function CreateBlueTeamComponent(props) {
   }
   
   const handleButtonClick = () => {
-    console.log(inputValues);
+   // console.log(inputValues);
+
 
     fetch(blueTeamUrl,{
-      method: 'POST',
+      method: 'PATCH',
       headers:{'Content-Type': 'application/json'},
-      body: JSON.stringify(inputValues)
+      body: JSON.stringify({members:inputValues})
     }).then(res => res.json())
     .then(data => console.log(data))
   };

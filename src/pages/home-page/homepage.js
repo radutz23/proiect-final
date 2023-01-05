@@ -1,5 +1,6 @@
 import { Home } from '@mui/icons-material';
 import React, { useEffect, useRef } from 'react';
+import { Socials } from '../../components/socials/socials';
 import './homepage.css';
 
 export function Homepage() {
@@ -17,10 +18,10 @@ export function Homepage() {
             <div>
                 <div>
                     <ul>
-                        <li><a href="#">HOME</a></li>
+                        <li><a href="/">HOME</a></li>
                         <li><a href="how-to-play">HOW TO PLAY</a></li>
-                        <li><a href="#">GO MOBILE!</a></li>
-                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="/go-mobile">GO MOBILE!</a></li>
+                        <li><a href="/contact-us">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -37,20 +38,7 @@ export function Homepage() {
             <p>'THE CATEGORIES GAME'</p>
             <a href="/play" class="btnn">PLAY!</a>
         </div>
-        <div class="contact-links">
-            <a href="https://www.instagram.com/zaidirfankhan/?hl=en" target="_blank" 
-               class="btn contact-details"><i class="fab fa-instagram"></i>
-               </a>
-            <a
-               href="https://twitter.com/ZaidIrfanKhan"
-               target="_blank"
-               class="btn contact-details"><i class="fab fa-twitter"></i>
-              </a>
-            <a href="https://codepen.io/zaidik" target="_blank" class="btn contact-details"><i class="fab fa-codepen"></i></a>
-            <a href="https://github.com/ZaidKhan144" target="_blank" class="btn contact-details"> <i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/zaid-irfan-khan-9a4b964b/" target="_blank" class="btn contact-details"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:zaidirfan.945@gmail.com" class="btn contact-details"><i class="far fa-envelope"></i></a>
-          </div>
+        <Socials/>
     </header>
     </div>
   );

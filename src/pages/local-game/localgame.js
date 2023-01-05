@@ -1,8 +1,10 @@
 import { useEffect, useState,useRef } from 'react';
 import { useParams } from 'react-router-dom';
+import { Socials } from '../../components/socials/socials';
 import './localgame.css';
 
 export function LocalGame({ currentTeam, handleScoreIncrement, redTeamScore, blueTeamScore }){
+
 
   const blueTeamScoreUrl = 'http://localhost:5000/blueteamscore';
   const redTeamScoreUrl = 'http://localhost:5000/redteamscore';
@@ -13,58 +15,27 @@ export function LocalGame({ currentTeam, handleScoreIncrement, redTeamScore, blu
     fetch(`${blueTeamScoreUrl}/1`)
       .then((response) => response.json())
       .then((scor) => setScorAlbastruFinal(scor))
-  }, []);
+  }, [scorAlbastruFinal.score]);
 
   useEffect(() => {
-    fetch(`${redTeamScoreUrl}/2`)
+    fetch(`${redTeamScoreUrl}/1`)
+    .then(console.log(scorAlbastruFinal))
       .then((response) => response.json())
       .then((scor) => setScorRosuFinal(scor))
-  }, []);
+  }, [scorRosuFinal.score]);
   
     const dataFetchedRef = useRef(false);
 
-    const redTeamUrl = 'http://localhost:5000/redteam';
+    const redTeamUrl = 'http://localhost:5000/redteam/1';
     const [redTeamPlayers, setRedTeamPlayers] = useState([]);
-    const blueTeamUrl = 'http://localhost:5000/blueteam';
+    const blueTeamUrl = 'http://localhost:5000/blueteam/1';
     const [blueTeamPlayers, setblueTeamPlayers] = useState([]);
 
-    const blueTeamUrlNomination='http://localhost:5000/blueteamnomination';
-    const redTeamUrlNomination ='http://localhost:5000/redteamnomination';
+    const blueTeamUrlNomination='http://localhost:5000/blueteamnomination/1';
+    const redTeamUrlNomination ='http://localhost:5000/redteamnomination/1';
 
     let blueTeamButtonClicked = false;
     let redTeamButtonClicked = false;
-
-
-    
-    // const blueTeamButton = document.querySelector('.create-blue-team button');
-    // blueTeamButton.addEventListener('click', () => {
-    //   blueTeamButtonClicked = true;
-    //   if (blueTeamButtonClicked && redTeamButtonClicked) {
-    //     const blueTeamParagraphs = document.querySelectorAll('.blue-team-player');
-    //     const redTeamParagraphs = document.querySelectorAll('.red-team-player');
-    //     blueTeamParagraphs.forEach(paragraph => console.log(paragraph.innerText));
-    //     redTeamParagraphs.forEach(paragraph => console.log(paragraph.innerText));
-    //   }
-    // });
-    
-    // const redTeamButton = document.querySelector('.create-red-team button');
-    // redTeamButton.addEventListener('click', () => {
-    //   redTeamButtonClicked = true;
-    //   if (blueTeamButtonClicked && redTeamButtonClicked) {
-    //     const blueTeamParagraphs = document.querySelectorAll('.blue-team-player');
-    //     const redTeamParagraphs = document.querySelectorAll('.red-team-player');
-    //     blueTeamParagraphs.forEach(paragraph => console.log(paragraph.innerText));
-    //     redTeamParagraphs.forEach(paragraph => console.log(paragraph.innerText));
-    //   }
-    // });
-    
-//     const blueTeamButtonRef = useRef(null);
-// const blueTeamParagraphRef = useRef(null);
-// useEffect(() => {
-//   blueTeamButtonRef.current.addEventListener('click', () => {
-//     console.log(blueTeamParagraphRef.current.innerText);
-//   });
-// }, []);
 
 const [randomCategory, setRandomCategory] = useState(null);
 
@@ -82,10 +53,10 @@ useEffect(() => {
 
       setRandomCategory(category.Category);
       console.log(category.Category);
-      fetch('http://localhost:5000/currentcategory',{       
-        method: 'POST',
+      fetch('http://localhost:5000/currentcategory/1',{       
+        method: 'PATCH',
         headers:{'Content-Type': 'application/json'},
-        body: JSON.stringify([category.Category])
+        body: JSON.stringify({actualcurrentcategory:category.Category})
       })
     });
 }, []);
@@ -100,14 +71,15 @@ useEffect(() => {
     useEffect(() => {
         fetch(redTeamUrl)
           .then((response) => response.json())
-          .then((redTeamPlayer) => setRedTeamPlayers(redTeamPlayer));
+          .then((redTeamPlayer) => setRedTeamPlayers(redTeamPlayer.members));
     
       }, []);
       
+    //  console.log("echipa rosie: "+ redTeamPlayers)
       useEffect(() => {
           fetch(blueTeamUrl)
             .then((response) => response.json())
-            .then((blueTeamPlayer) => setblueTeamPlayers(blueTeamPlayer));
+            .then((blueTeamPlayer) => setblueTeamPlayers(blueTeamPlayer.members));
       
         }, []);
 
@@ -117,13 +89,13 @@ useEffect(() => {
             const textContent = event.target.parentElement.textContent.trim();
 const textArray = textContent.split("Nominate");
             if (blueTeamButtonClicked && redTeamButtonClicked) {
-    console.log(textArray[0]);
+    console.log("ce cacat e text array" + textArray[0]);
 
 }
 fetch(blueTeamUrlNomination,{
-    method: 'POST',
+    method: 'PATCH',
     headers:{'Content-Type': 'application/json'},
-    body: JSON.stringify([textArray[0]])
+    body: JSON.stringify({actualblueteamnomination:textArray[0]})
   }).then(res => res.json())
   .then(data => console.log(data))
               
@@ -137,9 +109,6 @@ fetch(blueTeamUrlNomination,{
             clickedButton.innerHTML="Ready!";
           };
 
-
-  
-  
           
           const redTeamHideButtons = (event) => {
             redTeamButtonClicked = true;
@@ -150,11 +119,11 @@ const textArray = textContent.split("Nominate");
 
 }
 fetch(redTeamUrlNomination,{
-    method: 'POST',
+    method: 'PATCH',
     headers:{'Content-Type': 'application/json'},
-    body: JSON.stringify([textArray[1]])
+    body: JSON.stringify({actualredteamnomination:textArray[1]})
   }).then(res => res.json())
-  .then(data => console.log(data))
+  .then(data => console.log("ce moloz e asta" + data))
 
               const clickedButton = event.target;
               const buttons = document.querySelectorAll('.create-red-team button');
@@ -176,16 +145,6 @@ fetch(redTeamUrlNomination,{
 //    setTimeout(showButtons, 5000);
 
 
-   function sendInnerText() {
-    // Get the parent element of the button (the paragraph element)
-    var parent = this.parentElement;
-
-    // Get the inner text of the paragraph element
-    var innerText = parent.innerText;
-
-    // Log the inner text to the console
-    console.log(innerText);
-  }
 
 
 
@@ -227,7 +186,7 @@ fetch(redTeamUrlNomination,{
 
 
             <div class='create-team create-blue-team'>
-            
+            <p class='scoreboard'>{scorAlbastruFinal.score}</p>
 {blueTeamPlayers.map((player, index) => (
         <p class='blue-team-player team-player' 
         key={index} 
@@ -248,6 +207,7 @@ fetch(redTeamUrlNomination,{
 
 
 <div class='create-team create-red-team'>
+<p class='scoreboard'>{scorRosuFinal.score}</p>
   {redTeamPlayers.map((player, index) => (
     <p class='red-team-player team-player' key={index}>
       <button 
@@ -261,24 +221,11 @@ fetch(redTeamUrlNomination,{
     </p>
   ))}
 </div>
-        <p>{scorAlbastruFinal.score}</p>
-        <p>{scorRosuFinal.score}</p>
+        
+        
 
         </div>
-        <div class="contact-links">
-            <a href="https://www.instagram.com/zaidirfankhan/?hl=en" target="_blank" 
-               class="btn contact-details"><i class="fab fa-instagram"></i>
-               </a>
-            <a
-               href="https://twitter.com/ZaidIrfanKhan"
-               target="_blank"
-               class="btn contact-details"><i class="fab fa-twitter"></i>
-              </a>
-            <a href="https://codepen.io/zaidik" target="_blank" class="btn contact-details"><i class="fab fa-codepen"></i></a>
-            <a href="https://github.com/ZaidKhan144" target="_blank" class="btn contact-details"> <i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/zaid-irfan-khan-9a4b964b/" target="_blank" class="btn contact-details"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:zaidirfan.945@gmail.com" class="btn contact-details"><i class="far fa-envelope"></i></a>
-          </div>
+        <Socials/>
     </header>
     </div>
     );

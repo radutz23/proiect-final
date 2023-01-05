@@ -1,8 +1,8 @@
 import React, {useEffect, useState } from 'react';
 
-export function Timer({testezSiEU}) {
+export function Timer({testezSiEU, testezSiEU2}) {
   const [timeUp, setTimeUp] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(30);
+  const [timeLeft, setTimeLeft] = useState(5);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,7 +17,7 @@ export function Timer({testezSiEU}) {
 
   const startTimer = () => {
     setTimeUp(false);
-    setTimeLeft(30);
+    setTimeLeft(5);
   };
 
   const showModal = () => {
@@ -72,7 +72,7 @@ export function Timer({testezSiEU}) {
         <div>
         <h1>Did he get it right?</h1>
         <button onClick={testezSiEU}>Yeah...</button>
-        <button>HAHA No!</button>
+        <button onClick={testezSiEU2}>HAHA No!</button>
         <button className='answer-checker' onClick={showModal}>Check valid answers!</button>
         </div>
       ) : (

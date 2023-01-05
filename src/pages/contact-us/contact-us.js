@@ -1,9 +1,10 @@
-import './choose-gamemode.css';
+import { Home } from '@mui/icons-material';
 import React, { useEffect, useRef } from 'react';
 import { Socials } from '../../components/socials/socials';
+import './contact-us.css';
 
-export function ChooseGamemode() {
-  
+export function ContactUs() {
+
   return (
 
 <div>
@@ -16,10 +17,10 @@ export function ChooseGamemode() {
             <div>
                 <div>
                     <ul>
-                        <li><a href="/">HOME</a></li>
+                        <li><a href="#">HOME</a></li>
                         <li><a href="how-to-play">HOW TO PLAY</a></li>
-                        <li><a href="/go-mobile">GO MOBILE!</a></li>
-                        <li><a href="/contact-us">CONTACT</a></li>
+                        <li><a href="#">GO MOBILE!</a></li>
+                        <li><a href="#">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -32,10 +33,11 @@ export function ChooseGamemode() {
         </div>
 
         <div class="container showcase-inner">
-            <h1>That's BULLSH*T!</h1>
-            <p>'THE CATEGORIES GAME'</p>
-            <a href="/create-teams" class="btnn">LOCAL</a>
-            <a href="/log-in" class="btnn">ONLINE</a>
+            
+
+
+
+            
         </div>
         <Socials/>
     </header>

@@ -1,9 +1,9 @@
-import './choose-gamemode.css';
 import React, { useEffect, useRef } from 'react';
 import { Socials } from '../../components/socials/socials';
 
-export function ChooseGamemode() {
+export function Congratulations() {
   
+
   return (
 
 <div>
@@ -17,7 +17,7 @@ export function ChooseGamemode() {
                 <div>
                     <ul>
                         <li><a href="/">HOME</a></li>
-                        <li><a href="how-to-play">HOW TO PLAY</a></li>
+                        <li><a href="/how-to-play">HOW TO PLAY</a></li>
                         <li><a href="/go-mobile">GO MOBILE!</a></li>
                         <li><a href="/contact-us">CONTACT</a></li>
                     </ul>
@@ -32,10 +32,10 @@ export function ChooseGamemode() {
         </div>
 
         <div class="container showcase-inner">
-            <h1>That's BULLSH*T!</h1>
+            <h1>SEEMS LIKE WE HAVE A WINNER</h1>
+            <h1>CONGRATULATIONS</h1>
             <p>'THE CATEGORIES GAME'</p>
-            <a href="/create-teams" class="btnn">LOCAL</a>
-            <a href="/log-in" class="btnn">ONLINE</a>
+            <a href="/play" class="btnn">WANNA GO AT IT AGAIN?</a>
         </div>
         <Socials/>
     </header>

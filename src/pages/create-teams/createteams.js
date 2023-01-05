@@ -2,6 +2,7 @@ import './createteams.css';
 import React, { useEffect, useRef, useState,useContext } from 'react';
 import {CreateBlueTeamComponent} from '../../components/create-team-component/CreateBlueTeamComponent'
 import { CreateRedTeamComponent } from '../../components/create-team-component/CreateRedTeamComponent';
+import { Socials } from '../../components/socials/socials';
 
 export function CreateTeams() {
 
@@ -54,20 +55,7 @@ export function CreateTeams() {
         <a href="/local-game"  className={blueCount > 0 && redCount > 0 ? 'btnn' : 'btnn create-team-button-disabled'}>PLAY!</a>
             
         </div>
-        <div class="contact-links">
-            <a href="https://www.instagram.com/zaidirfankhan/?hl=en" target="_blank" 
-               class="btn contact-details"><i class="fab fa-instagram"></i>
-               </a>
-            <a
-               href="https://twitter.com/ZaidIrfanKhan"
-               target="_blank"
-               class="btn contact-details"><i class="fab fa-twitter"></i>
-              </a>
-            <a href="https://codepen.io/zaidik" target="_blank" class="btn contact-details"><i class="fab fa-codepen"></i></a>
-            <a href="https://github.com/ZaidKhan144" target="_blank" class="btn contact-details"> <i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/zaid-irfan-khan-9a4b964b/" target="_blank" class="btn contact-details"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:zaidirfan.945@gmail.com" class="btn contact-details"><i class="far fa-envelope"></i></a>
-          </div>
+        <Socials/>
     </header>
     </div>
   );

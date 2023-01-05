@@ -10,6 +10,8 @@ import { TestSandbox } from './pages/test/test';
 import { LocalGame } from './pages/local-game/localgame';
 import { GoMobile } from './pages/go-mobile/gomobile';
 import { BiddingPhase } from './pages/bidding-phase/biddingphase';
+import { Congratulations } from './pages/congratulations/congratulations';
+import { ContactUs } from './pages/contact-us/contact-us';
 
 function App() {
 
@@ -28,6 +30,8 @@ function App() {
   <Route path='/local-game' element={<LocalGame/>}></Route>
   <Route path='/go-mobile' element={<GoMobile/>}></Route>
   <Route path='/bidding-phase' element={<BiddingPhase/>}></Route>
+  <Route path='/congratulations' element={<Congratulations/>}></Route>
+  <Route path='/contact-us' element={<ContactUs/>}></Route>
 
 
 

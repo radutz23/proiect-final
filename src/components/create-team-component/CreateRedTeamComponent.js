@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 export function CreateRedTeamComponent(props) {
   const [inputValues, setInputValues] = useState([]);
   const [numInputs, setNumInputs] = useState(3);
-  const redTeamUrl = 'http://localhost:5000/redteam';
+  const redTeamUrl = 'http://localhost:5000/redteam/1';
 
   const handleInputChange = (event) => {
     const { value } = event.target;
@@ -15,15 +15,16 @@ export function CreateRedTeamComponent(props) {
   };
 
   const handleButtonClick = () => {
-    console.log(inputValues);
-
-    fetch(redTeamUrl,{
-      method: 'POST',
-      headers:{'Content-Type': 'application/json'},
-      body: JSON.stringify(inputValues)
-    }).then(res => res.json())
-    .then(data => console.log(data))
-  }
+    // console.log(inputValues);
+ 
+ 
+     fetch(redTeamUrl,{
+       method: 'PATCH',
+       headers:{'Content-Type': 'application/json'},
+       body: JSON.stringify({members:inputValues})
+     }).then(res => res.json())
+     .then(data => console.log(data))
+   };
   
 
   const handleAddInputButtonClick = () => {

@@ -335,7 +335,7 @@
       "Category": "SIIT 29"
     },
     {
-      "Question": "Numiti cat mai multi castigatori de Oscar",
+      "Question": "Name as many JavaScript array methods as you can!",
       "Answers": [
         "concat",
         "constructor",
@@ -375,29 +375,42 @@
     }
   ],
   "redteam": [
-    "rosu1",
-    "rosu2",
-    "rosu3"
+    {
+      "members": [
+        "seby",
+        "radutz",
+        "daniel"
+      ],
+      "id": "1"
+    }
   ],
   "blueteam": [
-    "albastru1",
-    "albastru2",
-    "albastru3"
+    {
+      "members": [
+        "costin",
+        "tibi",
+        "vladuts"
+      ],
+      "id": "1"
+    }
   ],
   "blueteamnomination": [
-    [
-      "albastru3"
-    ]
+    {
+      "actualblueteamnomination": "vladuts",
+      "id": "1"
+    }
   ],
   "redteamnomination": [
-    [
-      "rosu3"
-    ]
+    {
+      "actualredteamnomination": "radutz",
+      "id": "1"
+    }
   ],
   "currentcategory": [
-    [
-      "Movies"
-    ]
+    {
+      "actualcurrentcategory": "Cars",
+      "id": "1"
+    }
   ],
   "blueteamscore": [
     {

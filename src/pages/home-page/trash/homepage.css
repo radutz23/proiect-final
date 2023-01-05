@@ -1,0 +1,154 @@
+:root {
+    --yellow:#ffb400;
+    --blue: #0091ad;
+    --red: #a4243b;
+    --dark-green:#1e2d2f;
+    --light-grey:#c5c3c6;
+  }
+  
+  * {
+      box-sizing: border-box;
+    }
+  
+    html,.div-body{
+      margin: 0;
+      padding: 0;
+    }
+  
+  .hero-banner {
+      align-items: center;
+      display: flex;
+      height: 100vh;
+      position: relative;
+      justify-content: center;
+      z-index: -1;
+    }
+    
+    .hero-banner__title {
+      color: #fff;
+      font-size: 100px;
+      font-weight: 700;
+      padding: 0 20px;
+      position: absolute;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    
+    .hero-banner__stroked-title {
+      color: transparent;
+      -webkit-text-stroke: 2px white;
+      /* text-stroke: 2px white; */
+    }
+    
+    .hero-banner__image {
+      border-radius: 20px;
+      position: fixed;
+      transform: rotate(-15deg);
+      width: 450px;
+      filter: brightness(.4);
+    }
+    
+    .content {
+      background-color: #eaeaea;
+      font-size: 40px;
+      padding: 120px 80px;
+      height: 100vh;
+    }
+    
+    .div-body {
+      background-color: var(--yellow);
+      font-family: Arial;
+    }
+    
+    .navbar-elements{
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      color: white;
+      font-weight: 800;
+      font-size: 2rem;
+      gap: 2rem;
+    }
+  
+  
+  
+    .log-in-button{
+  color: red;
+  margin: 0 0 0 auto;
+  flex: 3;
+    }
+  
+    
+  button {
+      cursor: pointer;
+      border: 0;
+      border-radius: 4px;
+      font-weight: 600;
+      margin: 0 10px;
+      width: 200px;
+      padding: 10px 0;
+      box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+      transition: 0.4s;
+    }
+    
+    .reg {
+        color: var(--red);
+        background-color: rgba(255, 255, 255, 1);
+        border: 1px solid var(--red);
+      }
+      
+      .log {
+      color: white;
+      background-color: var(--red);
+    }
+    
+    button:hover {
+      color: white;
+      /* width:; */
+      box-shadow: 0 0 30px rgba(224, 85, 85, 0.6);
+      background-color: var(--red);
+    }
+  
+    .login-container{
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+      display: flex;
+    }
+  
+    .navbar{
+      background-color: var(--dark-green);
+      padding: 30px;
+      position: fixed;
+      width: 100%;
+    }
+  
+    .hero-banner__title2{
+      font-size: 2rem;
+      margin: 0;
+      padding: 0;
+      /* top: 0px; */
+      transform: translate(0px, 60px);
+    }
+    
+    .navbar-elements img{
+      filter: invert(96%) sepia(0%) saturate(15%) hue-rotate(281deg) brightness(104%) contrast(103%);  
+  }
+  
+  .logo{
+      position: absolute;
+  }
+  
+  .logo img{
+      height: 150px;
+      width: 150px;
+      background-image: url(./Picture1.png);
+  }
+  
+  .how-to-play__button{
+      align-self: center;
+      flex: 2;
+      text-align: center;
+  }

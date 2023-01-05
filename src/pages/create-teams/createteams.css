@@ -1,0 +1,57 @@
+
+    .create-team {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 20%;
+        background-color: rgba(169, 169, 169, 0.8);
+        border-radius: 5rem;
+        /* background-size: 150%; */
+        padding: 4rem;
+        /* height: 50px; */
+    }
+    
+    .create-blue-team{
+        left: 5%;
+        background-color: var(--blue);
+    }
+
+    .create-red-team{
+        right: 5%;
+        background-color: var(--red);
+    }
+
+    ::placeholder{
+        color: var(--light-grey);
+    }
+
+
+.player-name-input {
+    height: 4rem;
+    width: 30rem;
+    background: var(--blue-solid);
+    border-radius: 5rem;
+    padding: 10px;
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    border: 1px solid white;
+}
+
+.red-team{
+    background-color: var(--red-solid);
+}
+
+.create-team-button-submit{
+    background-color: var(--yellow-solid);
+    color: black;
+    font-size: 1.3rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.create-team-button-disabled{
+    pointer-events: none;
+    background-color: grey;
+}

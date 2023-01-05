@@ -1,0 +1,44 @@
+.woman-with-phone{
+    background-image: url('./woman-with-phone.jpg');
+    width: 600px;
+    height: 300px;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 3px solid white;
+}
+
+.standing-phone{
+    background-image: url('./standing-phone.png');
+    background-size: cover;
+    height: 400px;
+    width: 200px;
+}
+
+.appstore{
+    background-image:url('https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1276560000&h=7e7b68fad19738b5649a1bfb78ff46e9');
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+
+}
+
+.playstore{
+    background-image: url('https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png');
+    height: 200px;
+    width: 200px;
+    background-size: 100%;
+    
+}
+
+.standing-phone-container{
+    display: flex;
+    height: 400px;
+    width: 400px;
+}
+
+.online-store{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 200px;
+}

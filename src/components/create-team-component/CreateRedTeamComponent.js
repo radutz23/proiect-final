@@ -44,14 +44,14 @@ export function CreateRedTeamComponent(props) {
   return (
 
 
-      <div class='create-team create-red-team'>
+      <div className='create-team create-red-team'>
         <h1>RED TEAM!</h1>
 
         {[...Array(numInputs)].map((_, i) => (
-          <input key={i} name={i} onChange={handleInputChange} placeholder='Player name...' class='red-team player-name-input'/>
+          <input key={i} name={i} onChange={handleInputChange} placeholder='Player name...' className='red-team player-name-input'/>
         ))}
-        <button class='create-team-button-submit' onClick={handleMultipleFunctions}>Lock 'em in!</button>
-        <button class='create-team-button-submit' onClick={handleAddInputButtonClick}>Add more players</button>
+        <button className='create-team-button-submit' onClick={handleMultipleFunctions}>Lock 'em in!</button>
+        <button className='create-team-button-submit' onClick={handleAddInputButtonClick}>Add more players</button>
 
 
       </div>

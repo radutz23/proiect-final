@@ -229,7 +229,7 @@ useEffect(() => {
 
 <div className='modal visibility-hidden'>
 {/* {questionAnswers.map((raspuns) => (
-    <p class='red-team-player team-player'>
+    <p className='red-team-player team-player'>
       {raspuns}
     </p>
   ))} */}
@@ -237,11 +237,11 @@ useEffect(() => {
 </div>
 
 
-<div class="menu-wrap">
-        <input type="checkbox" class="toggler"/>
-        <div class="hamburger"><div></div></div>
+<div className="menu-wrap">
+        <input type="checkbox" className="toggler"/>
+        <div className="hamburger"><div></div></div>
         
-        <div class="menu">
+        <div className="menu">
             <div>
                 <div>
                     <ul>
@@ -254,10 +254,10 @@ useEffect(() => {
             </div>
         </div>
     </div>
-    <header class="showcase">
-    <div class="account">
-        <a href="/log-in" class="btnn login">LOG IN</a>
-        <a href="/log-in" class="btnn signup">SIGN UP</a>
+    <header className="showcase">
+    <div className="account">
+        <a href="/log-in" className="btnn login">LOG IN</a>
+        <a href="/log-in" className="btnn signup">SIGN UP</a>
         
         </div>
 
@@ -271,38 +271,38 @@ useEffect(() => {
         />
         </div>
       )}
-        <div class="container showcase-inner">
-            <div class='question-prompt'>
+        <div className="container showcase-inner">
+            <div className='question-prompt'>
             {playedCategory && <h1>{playedCategory}</h1>}
             {playedQuestion && <p>{playedQuestion}</p>}
            
     </div>
             
 
-            <h1 class='this-teams-turn'>{isBlueTurn ? "Blue team's turn" : "Red team's turn"}</h1>
+            <h1 className='this-teams-turn'>{isBlueTurn ? "Blue team's turn" : "Red team's turn"}</h1>
       
-      <input class='input-bid' type="text" value={count} onChange={handleChange} />
-      <div class='input-modifier-container'>
-      <button class='input-modifier-button' onClick={handleDecrement} disabled={count === previousCount}>-</button>
-      <button class='input-modifier-button' onClick={handleIncrement}>+</button>
+      <input className='input-bid' type="text" value={count} onChange={handleChange} />
+      <div className='input-modifier-container'>
+      <button className='input-modifier-button' onClick={handleDecrement} disabled={count === previousCount}>-</button>
+      <button className='input-modifier-button' onClick={handleIncrement}>+</button>
       </div>
 
 
-      <button class='input-modifier-button' onClick={handleBid}>Bid</button>
-      <button class='input-modifier-button' onClick={lockInBid}>That's BULLSH*T!</button>
+      <button className='input-modifier-button' onClick={handleBid}>Bid</button>
+      <button className='input-modifier-button' onClick={lockInBid}>That's BULLSH*T!</button>
 
 
-<div class='create-team create-blue-team background-bidder'>
+<div className='create-team create-blue-team background-bidder'>
 
-<p class='blue-team-player team-player bidding-nominee'>{blueTeamNomination}</p>
+<p className='blue-team-player team-player bidding-nominee'>{blueTeamNomination}</p>
 
 </div>
 
 
 
-<div class='create-team create-red-team'>
+<div className='create-team create-red-team'>
 
-<p class='red-team-player team-player bidding-nominee background-bidder'>{redTeamNomination}</p>
+<p className='red-team-player team-player bidding-nominee background-bidder'>{redTeamNomination}</p>
 
 </div>
             

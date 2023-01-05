@@ -10,11 +10,11 @@ export function Homepage() {
 
 <div>
 
-<div class="menu-wrap">
-        <input type="checkbox" class="toggler"/>
-        <div class="hamburger"><div></div></div>
+<div className="menu-wrap">
+        <input type="checkbox" className="toggler"/>
+        <div className="hamburger"><div></div></div>
         
-        <div class="menu">
+        <div className="menu">
             <div>
                 <div>
                     <ul>
@@ -27,16 +27,16 @@ export function Homepage() {
             </div>
         </div>
     </div>
-    <header class="showcase">
-    <div class="account">
-        <a href="/log-in" class="btnn login">LOG IN</a>
-        <a href="/log-in" class="btnn signup">SIGN UP</a>
+    <header className="showcase">
+    <div className="account">
+        <a href="/log-in" className="btnn login">LOG IN</a>
+        <a href="/log-in" className="btnn signup">SIGN UP</a>
         </div>
 
-        <div class="container showcase-inner">
+        <div className="container showcase-inner">
             <h1>That's BULLSH*T!</h1>
             <p>'THE CATEGORIES GAME'</p>
-            <a href="/play" class="btnn">PLAY!</a>
+            <a href="/play" className="btnn">PLAY!</a>
         </div>
         <Socials/>
     </header>

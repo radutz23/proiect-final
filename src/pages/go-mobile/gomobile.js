@@ -6,11 +6,11 @@ export function GoMobile(){
 
 <div>
 
-<div class="menu-wrap">
-        <input type="checkbox" class="toggler"/>
-        <div class="hamburger"><div></div></div>
+<div className="menu-wrap">
+        <input type="checkbox" className="toggler"/>
+        <div className="hamburger"><div></div></div>
         
-        <div class="menu">
+        <div className="menu">
             <div>
                 <div>
                     <ul>
@@ -23,21 +23,21 @@ export function GoMobile(){
             </div>
         </div>
     </div>
-    <header class="showcase">
-    <div class="account">
-        <a href="/log-in" class="btnn login">LOG IN</a>
-        <a href="/log-in" class="btnn signup">SIGN UP</a>
+    <header className="showcase">
+    <div className="account">
+        <a href="/log-in" className="btnn login">LOG IN</a>
+        <a href="/log-in" className="btnn signup">SIGN UP</a>
         </div>
 
-        <div class="container showcase-inner">
+        <div className="container showcase-inner">
             
-<div class='woman-with-phone'></div>
-<div class='standing-phone-container'>
-        <div class='standing-phone'></div>
+<div className='woman-with-phone'></div>
+<div className='standing-phone-container'>
+        <div className='standing-phone'></div>
 
-        <div class='online-store'>
-            <div class='appstore'></div>
-            <div class='playstore'></div>
+        <div className='online-store'>
+            <div className='appstore'></div>
+            <div className='playstore'></div>
         </div>
 </div>
 

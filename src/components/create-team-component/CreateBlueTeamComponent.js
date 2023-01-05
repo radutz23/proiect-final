@@ -46,14 +46,14 @@ export function CreateBlueTeamComponent(props) {
 //   }, []);
   
   return (
-      <div class='create-team create-blue-team'>
+      <div className='create-team create-blue-team'>
         <h1>BLUE TEAM!</h1>
 
       {[...Array(numInputs)].map((_, i) => (
-        <input key={i} name={i} onChange={handleInputChange} placeholder='Player name...' class='blue-team player-name-input'/>
+        <input key={i} name={i} onChange={handleInputChange} placeholder='Player name...' className='blue-team player-name-input'/>
       ))}
-      <button class='create-team-button-submit' onClick={handleMultipleFunctions}>Lock 'em in!</button>
-      <button class='create-team-button-submit' onClick={handleAddInputButtonClick}>Add more players</button>
+      <button className='create-team-button-submit' onClick={handleMultipleFunctions}>Lock 'em in!</button>
+      <button className='create-team-button-submit' onClick={handleAddInputButtonClick}>Add more players</button>
     </div>
   );
 }

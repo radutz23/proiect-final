@@ -8,11 +8,11 @@ export function Congratulations() {
 
 <div>
 
-<div class="menu-wrap">
-        <input type="checkbox" class="toggler"/>
-        <div class="hamburger"><div></div></div>
+<div className="menu-wrap">
+        <input type="checkbox" className="toggler"/>
+        <div className="hamburger"><div></div></div>
         
-        <div class="menu">
+        <div className="menu">
             <div>
                 <div>
                     <ul>
@@ -25,17 +25,17 @@ export function Congratulations() {
             </div>
         </div>
     </div>
-    <header class="showcase">
-    <div class="account">
-        <a href="/log-in" class="btnn login">LOG IN</a>
-        <a href="/log-in" class="btnn signup">SIGN UP</a>
+    <header className="showcase">
+    <div className="account">
+        <a href="/log-in" className="btnn login">LOG IN</a>
+        <a href="/log-in" className="btnn signup">SIGN UP</a>
         </div>
 
-        <div class="container showcase-inner">
+        <div className="container showcase-inner">
             <h1>SEEMS LIKE WE HAVE A WINNER</h1>
             <h1>CONGRATULATIONS</h1>
             <p>'THE CATEGORIES GAME'</p>
-            <a href="/play" class="btnn">WANNA GO AT IT AGAIN?</a>
+            <a href="/play" className="btnn">WANNA GO AT IT AGAIN?</a>
         </div>
         <Socials/>
     </header>

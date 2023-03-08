@@ -377,9 +377,9 @@
   "redteam": [
     {
       "members": [
-        "seby",
-        "radutz",
-        "daniel"
+        "red 1",
+        "red 2",
+        "red 3"
       ],
       "id": "1"
     }
@@ -387,34 +387,34 @@
   "blueteam": [
     {
       "members": [
-        "costin",
-        "tibi",
-        "vladuts"
+        "blue 1",
+        "blue 2",
+        "blue 3"
       ],
       "id": "1"
     }
   ],
   "blueteamnomination": [
     {
-      "actualblueteamnomination": "vladuts",
+      "actualblueteamnomination": "blue 1",
       "id": "1"
     }
   ],
   "redteamnomination": [
     {
-      "actualredteamnomination": "radutz",
+      "actualredteamnomination": "red 3",
       "id": "1"
     }
   ],
   "currentcategory": [
     {
-      "actualcurrentcategory": "Cars",
+      "actualcurrentcategory": "Rock",
       "id": "1"
     }
   ],
   "blueteamscore": [
     {
-      "score": "0",
+      "score": 1,
       "id": "1"
     }
   ],

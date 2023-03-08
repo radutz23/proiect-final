@@ -2,7 +2,7 @@ import React, {useEffect, useState } from 'react';
 
 export function Timer({testezSiEU, testezSiEU2}) {
   const [timeUp, setTimeUp] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(5);
+  const [timeLeft, setTimeLeft] = useState(30);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,7 +17,7 @@ export function Timer({testezSiEU, testezSiEU2}) {
 
   const startTimer = () => {
     setTimeUp(false);
-    setTimeLeft(5);
+    setTimeLeft(30);
   };
 
   const showModal = () => {

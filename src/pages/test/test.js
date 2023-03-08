@@ -7,9 +7,9 @@ export function TestSandbox() {
     setIsModalOpen(true);
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  // const closeModal = () => {
+  //   setIsModalOpen(false);
+  // };
 
   return (
     <div>

@@ -152,11 +152,11 @@ fetch(redTeamUrlNomination,{
 
 <div>
 
-<div class="menu-wrap">
-        <input type="checkbox" class="toggler"/>
-        <div class="hamburger"><div></div></div>
+<div className="menu-wrap">
+        <input type="checkbox" className="toggler"/>
+        <div className="hamburger"><div></div></div>
         
-        <div class="menu">
+        <div className="menu">
             <div>
                 <div>
                     <ul>
@@ -169,26 +169,26 @@ fetch(redTeamUrlNomination,{
             </div>
         </div>
     </div>
-    <header class="showcase">
-    <div class="account">
-        <a href="/log-in" class="btnn login">LOG IN</a>
-        <a href="/log-in" class="btnn signup">SIGN UP</a>
+    <header className="showcase">
+    <div className="account">
+        <a href="/log-in" className="btnn login">LOG IN</a>
+        <a href="/log-in" className="btnn signup">SIGN UP</a>
         </div>
 
-        <div class="container showcase-inner">
-        <div class='this-rounds-category-background'>
+        <div className="container showcase-inner">
+        <div className='this-rounds-category-background'>
             <h1>This round's category is:</h1>
-            {randomCategory && <h1 class='current-category-final'>{randomCategory}</h1>}
+            {randomCategory && <h1 className='current-category-final'>{randomCategory}</h1>}
            
         </div>
 
-        <a class='get-biddin-href' href='/bidding-phase'>Get Biddin'!</a>
+        <a className='get-biddin-href' href='/bidding-phase'>Get Biddin'!</a>
 
 
-            <div class='create-team create-blue-team'>
-            <p class='scoreboard'>{scorAlbastruFinal.score}</p>
+            <div className='create-team create-blue-team'>
+            <p className='scoreboard'>{scorAlbastruFinal.score}</p>
 {blueTeamPlayers.map((player, index) => (
-        <p class='blue-team-player team-player' 
+        <p className='blue-team-player team-player' 
         key={index} 
         // ref={blueTeamParagraphRef}
         >
@@ -206,10 +206,10 @@ fetch(redTeamUrlNomination,{
 </div>
 
 
-<div class='create-team create-red-team'>
-<p class='scoreboard'>{scorRosuFinal.score}</p>
+<div className='create-team create-red-team'>
+<p className='scoreboard'>{scorRosuFinal.score}</p>
   {redTeamPlayers.map((player, index) => (
-    <p class='red-team-player team-player' key={index}>
+    <p className='red-team-player team-player' key={index}>
       <button 
       className='team-nominate' 
       id={`button-${player}`}

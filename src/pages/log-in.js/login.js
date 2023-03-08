@@ -33,48 +33,48 @@ useEffect(() => {
 
   return (
 
-<div class="container-login" id="container-login" ref={container}>
-        <div class="form-container sign-up-container">
+<div className="container-login" id="container-login" ref={container}>
+        <div className="form-container sign-up-container">
             <form action="#">
                 <h1>Create Account</h1>
-                <div class="social-container">
-                    <a href="https://www.instagram.com/zaidirfankhan/?hl=en" target="_blank" class="social"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/ZaidIrfanKhan" target="_blank" class="social"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/zaid-irfan-khan-9a4b964b/" target="_blank" class="social"><i class="fab fa-linkedin-in"></i></a>
+                <div className="social-container">
+                    <a href="https://www.instagram.com/radutz23" target="_blank" className="social"><i className="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/radutz23" target="_blank" className="social"><i className="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/alexandru-catalin-radulescu" target="_blank" className="social"><i className="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registration</span>
                 <input type="text" placeholder="Name"/>
                 <input type="email" placeholder="Email"/>
                 <input type="password" placeholder="Password"/>
-                <button class="su" >Sign Up</button>
+                <button className="su" >Sign Up</button>
             </form>
         </div>
-        <div class="form-container sign-in-container">
+        <div className="form-container sign-in-container">
             <form action="#">
                 <h1>Sign In</h1>
-                <div class="social-container">
-                    <a href="https://www.instagram.com/zaidirfankhan/?hl=en" target="_blank" class="social"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/ZaidIrfanKhan" target="_blank" class="social"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/zaid-irfan-khan-9a4b964b/" target="_blank" class="social"><i class="fab fa-linkedin-in"></i></a>
+                <div className="social-container">
+                    <a href="https://www.instagram.com/radutz23" target="_blank" className="social"><i className="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/radutz23" target="_blank" className="social"><i className="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/alexandru-catalin-radulescu" target="_blank" className="social"><i className="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your account</span>
                 <input type="email" placeholder="Email"/>
                 <input type="password" placeholder="Password"/>
-                <a href="http://Youtube.com/c/ZaidIrfanKhan" target="_blank">I Forgot my Password</a>
-                <button class="si">Sign In</button>
+                <a href="https://www.youtube.com/channel/UChkbDUG76-C6vGBSkv12c0A" target="_blank">I Forgot my Password</a>
+                <button className="si">Sign In</button>
             </form>
         </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
+        <div className="overlay-container">
+            <div className="overlay">
+                <div className="overlay-panel overlay-left">
                     <h1>Welcome Back!</h1>
                     <p>Show them who's boss!</p>
-                    <button class="ghost" id="signIn" ref={signInButton}>Sign In</button>
+                    <button className="ghost" id="signIn" ref={signInButton}>Sign In</button>
                 </div>
-                <div class="overlay-panel overlay-right">
+                <div className="overlay-panel overlay-right">
                     <h1>Hello, Wanderer!</h1>
                     <p>Came here to prove people wrong?</p>
-                    <button class="ghost" id="signUp" ref={signUpButton}>Sign Up</button>
+                    <button className="ghost" id="signUp" ref={signUpButton}>Sign Up</button>
                 </div>
             </div>
         </div>
